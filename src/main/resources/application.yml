@@ -6,7 +6,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://localhost:5432/todoorganizer
+    url: jdbc:postgresql://localhost:5432/todorganizer
     username: postgres
     password: admin
     driverClassName: org.postgresql.Driver

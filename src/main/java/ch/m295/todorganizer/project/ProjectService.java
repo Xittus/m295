@@ -4,9 +4,10 @@ import ch.m295.todorganizer.base.MessageResponse;
 import ch.m295.todorganizer.project.Project;
 import ch.m295.todorganizer.project.ProjectRepository;
 import ch.m295.todorganizer.storage.EntityNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ProjectService {
     private final ProjectRepository repository;
 

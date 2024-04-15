@@ -4,14 +4,18 @@ import ch.m295.todorganizer.base.MessageResponse;
 import ch.m295.todorganizer.project.Project;
 import ch.m295.todorganizer.project.ProjectService;
 import ch.m295.todorganizer.security.Roles;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
+@SecurityRequirement(name = "bearerAuth")
+@Validated
 public class ProjectController {
     private final ProjectService projectService;
 

@@ -4,9 +4,10 @@ import ch.m295.todorganizer.base.MessageResponse;
 import ch.m295.todorganizer.member.Member;
 import ch.m295.todorganizer.member.MemberRepository;
 import ch.m295.todorganizer.storage.EntityNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class MemberService {
     private final MemberRepository repository;
 
