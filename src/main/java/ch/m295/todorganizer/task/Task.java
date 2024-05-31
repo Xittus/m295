@@ -19,16 +19,16 @@ public class Task {
     @NotEmpty
     private String name;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "memberid", referencedColumnName = "id")
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "memberid")
     private Member member;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "categoryid", referencedColumnName = "id")
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "categoryid")
     private Category category;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "projectid", referencedColumnName = "id")
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "projectid")
     private Project project;
 
     public Task(String name,Category category, Member member, Project project) {
